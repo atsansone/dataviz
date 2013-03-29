@@ -66,6 +66,313 @@
           </section>
         </section>
 
+        <section>
+          <section>
+            <h1>What Is It?</h1>
+          </section>
+
+          <section>
+            <h2>Not <em>Big</em> Data</h2>
+            <p class="fragment">Normally…</p>
+          </section>
+
+          <section>
+            <h2>Dirty</h2>
+          </section>
+
+          <section>
+            <h2>Unpredictable</h2>
+          </section>
+
+          <section>
+            <h2>Limited</h2>
+          </section>
+
+          <section>
+            <h2>Never Exactly<br>What You Need</h2>
+          </section>
+
+          <section>
+            <h2>Unpleasant</h2>
+
+            <aside class="notes">
+              I don't mean to make it sound horrible, but it's generally a
+              headache to work with.
+            </aside>
+          </section>
+
+          <section>
+            <h2>Constrained</h2>
+            <p class="fragment">
+              Quantifiable
+            </p>
+
+            <ul>
+              <li class="fragment">150 Representatives</li>
+              <li class="fragment">31 Senators</li>
+              <li class="fragment">254 Counties</li>
+            </ul>
+          </section>
+
+          <section data-state="soothe">
+            <h2><em>Really Interesting</em></h2>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Strategies</h1>
+          </section>
+
+          <section>
+            <h2>Script Everything</h2>
+          </section>
+
+          <section>
+            <h2>Seriously, <em class="fragment">Everything</em></h2>
+          </section>
+
+          <section>
+            <h2>Keep Copies</h2>
+          </section>
+
+          <section>
+            <h2>Know Your Source</h2>
+          </section>
+
+          <section>
+            <h2>Know What<br>Humans Touched</h2>
+          </section>
+
+          <section>
+            <h2>Know Everything</h2>
+          </section>
+
+          <section>
+            <h2>Trust <em>No One</em></h2>
+          </section>
+
+          <section>
+            <h2>Document Everything</h2>
+            <p class="fragment">At least everything you use and learn</p>
+          </section>
+
+          <section>
+            <h2>Embrace Change</h2>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Tools</h1>
+          </section>
+
+          <section>
+            <h2>Git</h2>
+
+            <aside class="notes">
+              This isn't huge data.  You need to keep copies of it around, so throw
+              those copies into source control.  Depending on the structure and format,
+              this can be an excellent way to see how data is changing.
+            </aside>
+          </section>
+
+          <section>
+            <h2>CSVKit</h2>
+          </section>
+
+          <section>
+            <h2><a href="http://tabula.nerdpower.org/">Tabula</a></h2>
+          </section>
+
+          <section>
+            <h2>Unix Philosophy</h2>
+
+            <div class="fragment">
+              <blockquote cite="http://en.wikipedia.org/wiki/Unix_philosophy">
+                Write programs that do one thing and do it well. Write programs to
+                work together. Write programs to handle text streams, because that
+                is a universal interface.
+              </blockquote>
+            </div>
+
+            <aside class="notes">
+              This isn't a tool, but you should follow it whenever you build
+              tools.  You want all of your data processing to follow the Unix
+              Philosophy so you can swap out any part of your tool chain.
+            </aside>
+          </section>
+
+          <section>
+            <h2><a href="http://python.org/">Python</a></h2>
+
+            <p class="fragment"><a href="http://www.numpy.org/">NumPy</a></p>
+            <p class="fragment"><a href="http://pandas.pydata.org/">pandas</a></p>
+          </section>
+
+          <section>
+            <h2><a href="http://www.r-project.org/">R</a></h2>
+          </section>
+
+          <section>
+            <h2><a href="http://tabula.nerdpower.org/">Tabula</a></h2>
+          </section>
+
+          <section>
+            <h2>Chrome Web Tools</h2>
+
+            <aside class="notes">
+              This is often overlooked, but if you're building scrapers it's a
+              great way to interact with the data.
+            </aside>
+          </section>
+
+          <section>
+            <h2><a href="http://jquery.com/">jQuery</a> -> <a href="http://pythonhosted.org/pyquery/">pyQuery</a></h2>
+
+            <aside class="notes">
+              Part of working with Chrome Web Tools is using jQuery to inspect
+              the DOM and locate relevant information.  This is part of the
+              exploratory phase, then I move that code into Python and pyQuery
+              to start processing the results I find.
+            </aside>
+          </section>
+
+          <section>
+            <h2>HTTP Proxies</h2>
+
+            <ul>
+              <li class="fragment"><a href="http://www.charlesproxy.com/">Charles Proxy</a></li>
+              <li class="fragment"><a href="http://glimmerblocker.org/">Glimmer Blocker</a></li>
+            </ul>
+
+            <aside class="notes">
+              <p>
+                Charles Proxy is great for dealing with websites that you need to
+                reverse engineer.  Remember, you're scripting everything, so you
+                want to be able to script retrieving the data too.
+              </p>
+
+              <p>
+                Glimmer Blocker is interesting as a tool that you can use for
+                unintended purposes.  It's meant to block sites and filter traffic,
+                but it also provides logging.  You can set it up as the HTTP proxy
+                for your phone, then all traffic will go through it and get logged.
+                You can use it to "discover" hidden APIs to get at data that's hidden
+                in mobile applications.
+              </p>
+            </aside>
+          </section>
+
+          <section>
+            <h2><a href="https://github.com/OpenRefine/OpenRefine">OpenRefine</a></h2>
+          </section>
+
+          <section>
+            <h2><a href="https://www.overviewproject.org/">Overview</a></h2>
+          </section>
+
+          <section>
+            <h2>Data Stores</h2>
+
+            <ul>
+              <li>CouchDB</li>
+              <li>MongoDB</li>
+              <li class="fragment">Postgres/PostGIS</li>
+            </ul>
+
+            <aside class="notes">
+              Both of these are included as simple data stores that are easy to get
+              started with.  Both have their pros and cons that are documented much
+              better than I can here in a few minutes, so I encourage you to spend
+              some time learning about that.
+            </aside>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h1>Use Cases</h1>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1><a href="http://www.texastribune.org/public-ed/explore/">Public Schools Explorer</a></h1>
+          </section>
+
+          <section>
+            <h2>8 Different Sources</h2>
+          </section>
+
+          <section>
+            <h2>Over 70 millions rows</h2>
+          </section>
+
+          <section>
+            <h2>1 data source has over 700 columns</h2>
+          </section>
+
+          <section>
+            <h2>12 Steps to Import</h2>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1><a href="http://www.texastribune.org/library/data/government-employee-salaries/">State Employee<br>Salaries</a></h1>
+          </section>
+
+          <section>
+            <h2>141 Sources</h2>
+          </section>
+
+          <section>
+            <h2>Mostly Provided Separately</h2>
+          </section>
+
+          <section>
+            <h2>Still Automating</h2>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1><a href="http://www.texastribune.org/library/data/texas-prisons/">State Prisoners</a></h1>
+          </section>
+
+          <section>
+            <h2>1 Source</h2>
+          </section>
+
+          <section>
+            <h2>On auto-pilot</h2>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1><a href="http://www.texastribune.org/library/data/texas-reservoir-levels/">Reservoir Map</a></h1>
+          </section>
+
+          <section>
+            <h2>JSON Data!</h2>
+          </section>
+
+          <section>
+            <h2>Built Relationship</h2>
+
+            <ul>
+              <li>Early Access</li>
+              <li>Provided Feedback</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Talk to Your Sources</h2>
+          </section>
+        </section>
 
         <section>
           <h1>Questions?</h1>
