@@ -64,6 +64,19 @@
             <h2>Slides are Online</h2>
             <p>Link at the end, so hold your horses</p>
           </section>
+
+          <section>
+            <h2>Texas Tribune</h2>
+
+            <img src="./images/txtrib.png" style="width:254px; margin: 1em auto; border: 0; background: #000;">
+
+            <aside class="notes">
+              I work at the Texas Tribune as the Director of Technology.  We do
+              a lot of data applications where we're munging data from different
+              sources and turning it into something more useful for our readers.
+              This talk is about the lessons we've learned.
+            </aside>
+          </section>
         </section>
 
         <section>
@@ -74,18 +87,72 @@
           <section>
             <h2>Not <em>Big</em> Data</h2>
             <p class="fragment">Normally…</p>
+
+            <aside class="notes">
+              Most real-world data, as I'm describing it, is not a big data problem.
+              Yes, if you're dealing with traffic sensors around Houston highway
+              system and getting hundreds of data points every second from thousands
+              of sensors, that's a big data problem.  If you're dealing with college
+              readiness numbers from the <acronym title="Texas Edcation Agency">TEA</acronym>,
+              that's not big data.
+            </aside>
           </section>
 
           <section>
             <h2>Dirty</h2>
+
+            <aside class="notes">
+              Most of the data you get in these situations is dirty data.  Most likely,
+              someone manually entered it and it most certainly had a human interact with
+              it at some point.
+            </aside>
           </section>
 
           <section>
             <h2>Unpredictable</h2>
+
+            <aside class="notes">
+              <p>
+                Because people are involved in producing most of this data, it's
+                very unpredictable.  What was right yesterday when you pulled
+                the data might not be true tomorrow.  Plan on the data being
+                unpredictable and you'll safeguard your processes.
+              </p>
+
+              <p>
+                Case in point, a few years ago I built the first version of the
+                Texas Tribune bills tracker.  We started work on it in November
+                and session started the first week of January.  I built everything
+                up using the previous session (81st) as the model.  One of those
+                pieces of data was that Senator Dan Patrick was always shown in
+                their data as "Patrick, Dan".
+              </p>
+
+              <p>
+                There were two Patricks in the legislature.  Dan Patrick was a
+                senator and Diane Patrick was a representative.  Since there were
+                two, they had their names adjusted to show that they were distinct.
+                Or that's the way it was in the 81st Session.
+              </p>
+
+              <p>
+                Starting the day after the 82nd Session kicked off, Dan
+                Patrick's name was presented as Patrick.  Apparently, it was
+                decided that senators should have just their last names
+                displayed if there were no other senators that conflicted and
+                representatives would get the Last, First treatment.
+              </p>
+            </aside>
           </section>
 
           <section>
             <h2>Limited</h2>
+
+            <aside class="notes">
+              Most of the data you're going to get is going to be limited in scope.
+              You're normally going to have to combine multiple sources to get
+              everything you're after, because...
+            </aside>
           </section>
 
           <section>
@@ -112,10 +179,23 @@
               <li class="fragment">31 Senators</li>
               <li class="fragment">254 Counties</li>
             </ul>
+
+            <aside class="notes">
+              This is a plus.  Most big data problems have no upper bound.  Most
+              real-world data represents something.  It's a set number of
+              representatives or senators.  Texas only has so many counties.
+              This gives you something to test against to make sure you've got
+              everything you need.
+            </aside>
           </section>
 
           <section data-state="soothe">
             <h2><em>Really Interesting</em></h2>
+
+            <aside class="notes">
+              If nothing else, there's lots of really interesting pieces of data
+              out there that you can grab hold of to do cool things with.
+            </aside>
           </section>
         </section>
 
@@ -130,35 +210,89 @@
 
           <section>
             <h2>Seriously, <em class="fragment">Everything</em></h2>
+
+            <aside class="notes">
+              Whether you're writing a scraper or adjusting first/last orders in
+              columns of a CSV, write a script for it.  It's ok to tinker with
+              manual processes, but never use data that wasn't generated by a
+              script.  It makes the process something you can duplicate.
+            </aside>
           </section>
 
           <section>
             <h2>Keep Copies</h2>
+
+            <aside class="notes">
+              Data frequently disappears or changes in ways that can't fully be
+              explained to those of us who think data should live forever.  Make
+              sure to keep a copy of the original source data, whether that's
+              CSV, a shapefile, or HTML that you're processing.
+            </aside>
           </section>
 
           <section>
             <h2>Know Your Source</h2>
+
+            <aside class="notes">
+              Understand where you're data is coming from.  Private sources might
+              have a horse in the race so the data they provide could be slanted.
+              Government agencies could have a mandate that forces their hand in
+              what they provide.  Make sure you know that.
+            </aside>
           </section>
 
           <section>
             <h2>Know What<br>Humans Touched</h2>
+
+            <aside class="notes">
+              Know if a human was involved with any of the data you're working
+              with.  Often, government data will have someone that's tweaking
+              this data point, or adjusting that.  Make sure you understand
+              where humans were involved with your data so you know where to
+              watch for anomalies.
+            </aside>
           </section>
 
           <section>
             <h2>Know Everything</h2>
-          </section>
 
-          <section>
-            <h2>Trust <em>No One</em></h2>
+            <aside class="notes">
+              <p>
+                Basically, know everything.  When you're working with real-world
+                data, you need to understand everything about the data that
+                you're processing.  It's not uncommon to have a row of data that
+                looks perfectly valid, but column 221 has a special flag, that
+                if set, means this data is junk and should be ignored.
+              </p>
+
+              <p>
+                Make sure you grok the entire data set and don't make
+                assumptions about it.
+              </p>
+            </aside>
           </section>
 
           <section>
             <h2>Document Everything</h2>
             <p class="fragment">At least everything you use and learn</p>
+
+            <aside class="notes">
+              There is going to be a time when you come back to your importer
+              and go "why did I throw out columns 11-13?"  Make sure you're
+              documenting your work and what you learned about the data.  Does
+              column 221 provide a "junk" status on a column, make sure that's
+              documented.  Code works, English is better.
+            </aside>
           </section>
 
           <section>
             <h2>Embrace Change</h2>
+
+            <aside class="notes">
+              Be prepared for change.  Don't write brittle code that interacts
+              with the data.  Just admit it's going to change and be ready for
+              that.
+            </aside>
           </section>
         </section>
 
@@ -178,11 +312,32 @@
           </section>
 
           <section>
-            <h2>CSVKit</h2>
+            <h2><a href="https://github.com/onyxfish/csvkit">CSVKit</a></h2>
+
+            <aside class="notes">
+              <p>
+                CSVKit provides a bunch of command line tools for inspecting and
+                modifying csv files.  csv is the lingua franca of government data
+                sets, so this tool provides some really useful ways to get data
+                moved around.
+              </p>
+
+              <p>
+                Related, the intro documentation is an excellent way to teach
+                someone how to use a shell.
+              </p>
+            </aside>
           </section>
 
           <section>
             <h2><a href="http://tabula.nerdpower.org/">Tabula</a></h2>
+
+            <aside class="notes">
+              Demo time?  Tabula is a cool, new (unreleased) tool that allows
+              you to pull structured CSVs straight out of a PDF.  The version
+              that's launching is web-based, but it would be reasonable to
+              create a CLI version based on this.
+            </aside>
           </section>
 
           <section>
@@ -208,14 +363,24 @@
 
             <p class="fragment"><a href="http://www.numpy.org/">NumPy</a></p>
             <p class="fragment"><a href="http://pandas.pydata.org/">pandas</a></p>
+
+            <aside class="notes">
+              I'm partial, but I think Python is one of the (if not the) best
+              tool for dealing with data.  It's quick, easy to work with, and
+              provides pretty powerful tools for text processing.  Throw in
+              NumPy and pandas for dealing with heavy statistical work, and it's
+              pretty solid.
+            </aside>
           </section>
 
           <section>
             <h2><a href="http://www.r-project.org/">R</a></h2>
-          </section>
 
-          <section>
-            <h2><a href="http://tabula.nerdpower.org/">Tabula</a></h2>
+            <aside class="notes">
+              That said, R is gaining a lot of traction as a processing
+              language.  It's meant to be used in a statistical setting, so
+              it has a lot of batteries includes (or easily available).
+            </aside>
           </section>
 
           <section>
@@ -266,10 +431,31 @@
 
           <section>
             <h2><a href="https://github.com/OpenRefine/OpenRefine">OpenRefine</a></h2>
+
+            <aside class="notes">
+              <p>
+                This lets you create rules that are applied to the entire data
+                set.  It's a great way to create a first pass at normalizing data
+                so acronyms are expanded, and so forth.
+              </p>
+
+              <p>
+                This used to be a Google project, but it's now a full open-source
+                project called OpenRefine that you can run yourself.
+              </p>
+            </aside>
           </section>
 
           <section>
             <h2><a href="https://www.overviewproject.org/">Overview</a></h2>
+
+            <aside class="notes">
+              Overview takes text documents and processes them, pulling out
+              keywords and then give you a way to explore those trees of data.
+              I've not had a reason to use it (yet), but it looks amazing and
+              I've seen some of the demos for it (available on the site) that
+              provide some really interesting results.
+            </aside>
           </section>
 
           <section>
