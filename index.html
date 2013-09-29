@@ -1,27 +1,27 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
 
-    <title>Real World Data</title>
+  <title>Data Visualization</title>
 
-    <meta name="description" content="A talk on dealing with data from the real world">
-    <meta name="author" content="Travis Swicegood">
+  <meta name="description" content="A talk on presenting human accessible Data">
+  <meta name="author" content="Anthony T. Sansone">
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <link rel="stylesheet" href="css/reveal.min.css">
-    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/default.css" id="theme">
 
-    <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
 
-    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
-    <script>
-      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-    </script>
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+  <script>
+  document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script>
 
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
@@ -36,30 +36,27 @@
       <div class="slides">
 
         <section>
-          <h1>Real World Data</h1>
-          <h3>Dealing with it</h3>
+          <h1>Data Visualization</h1>
+          <h3>Finding Needles in Hay</h3>
           <p>
-            <small>A talk by <a href="http://travisswicegod.com">Travis Swicegood</a> / <a href="http://twitter.com/tswicegood">@tswicegood</a> / <a href="https://twitter.com/search/realtime?q=%23rwdata">#rwdata</a>
+            <small>A talk by <a href="http://www.anthony-sansone.com">Anthony T. Sansone</a> / <a href="http://twitter.com/atsansone">@atsansone</a> / <a href="https://twitter.com/dcaa">@dcaa</a>
             </small>
           </p>
         </section>
 
         <section>
           <section>
-            <h1>Quick Note</h1>
+            <h1>Not Boiling the Ocean</h1>
 
             <p>
-              This talk is a work-in-progress.  It's been given in various forms
-              a few times, but is being adjusted for (hopefully) SXSWi 2014.  If
-              you're interested in hearing the talk, be sure to
-              <a href="http://panelpicker.sxsw.com/vote/26142">vote for it</a>.
+              This talk is a distillation of what could be a complex topic. I will try to make it less so. I do not lay claim to being the world's expert on the topic. There's not many of them; I borrow from what they have found and built. So should you.
             </p>
           </section>
         </section>
 
         <section>
           <section>
-            <h1>House Keeping</h1>
+            <h1>Housekeeping</h1>
           </section>
 
           <section>
@@ -69,26 +66,54 @@
           <section>
             <h2>Twitter!</h2>
             <h3>
-              <a href="http://twitter.com/tswicegood">@tswicegood</a> |
-              <a href="https://twitter.com/search/realtime?q=%23rwdata">#rwdata</a>
+              <a href="http://twitter.com/atsansone">@atsansone</a> |
             </h3>
           </section>
 
           <section>
             <h2>Slides are Online</h2>
-            <p>Link at the end, so hold your horses</p>
+            <p>Link will be given at the end. You can find these later.</p>
           </section>
 
           <section>
-            <h2>Texas Tribune</h2>
-
-            <img src="./images/txtrib.png" style="width:254px; margin: 1em auto; border: 0; background: #000;">
+            <h2></h2>
 
             <aside class="notes">
-              I work at the Texas Tribune as the Director of Technology.  We do
-              a lot of data applications where we're munging data from different
-              sources and turning it into something more useful for our readers.
-              This talk is about the lessons we've learned.
+
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Pop Quiz</h1>
+          </section>
+
+          <section>
+            <h2>Have You Heard of Data Visualization?</h2>
+            <aside class="notes">
+
+            </aside>
+          </section>
+
+          <section>
+            <h2>What Do You Think Data Visualization Is?</h2>
+            <aside class="notes">
+
+            </aside>
+          </section>
+
+          <section>
+            <h2>Why Is It Important to Journalism?</h2>
+            <aside class="notes">
+
+            </aside>
+          </section>
+
+          <section>
+            <h2>Why Is It Important to You?</h2>
+            <aside class="notes">
+
             </aside>
           </section>
         </section>
@@ -99,264 +124,257 @@
           </section>
 
           <section>
-            <h2>Not <em>Big</em> Data</h2>
-            <p class="fragment">Normally…</p>
+            <h2>Data Photography</h2>
+            <p class="fragment">A Picture using...</p>
 
             <aside class="notes">
-              Most real-world data, as I'm describing it, is not a big data problem.
-              Yes, if you're dealing with traffic sensors around Houston highway
-              system and getting hundreds of data points every second from thousands
-              of sensors, that's a big data problem.  If you're dealing with college
-              readiness numbers from the <acronym title="Texas Edcation Agency">TEA</acronym>,
-              that's not big data.
-            </aside>
-          </section>
-
-          <section>
-            <h2>Dirty</h2>
-
-            <aside class="notes">
-              Most of the data you get in these situations is dirty data.  Most likely,
-              someone manually entered it and it most certainly had a human interact with
-              it at some point.
-            </aside>
-          </section>
-
-          <section>
-            <h2>Unpredictable</h2>
-
-            <aside class="notes">
-              <p>
-                Because people are involved in producing most of this data, it's
-                very unpredictable.  What was right yesterday when you pulled
-                the data might not be true tomorrow.  Plan on the data being
-                unpredictable and you'll safeguard your processes.
-              </p>
-
-              <p>
-                Case in point, a few years ago I built the first version of the
-                Texas Tribune bills tracker.  We started work on it in November
-                and session started the first week of January.  I built everything
-                up using the previous session (81st) as the model.  One of those
-                pieces of data was that Senator Dan Patrick was always shown in
-                their data as "Patrick, Dan".
-              </p>
-
-              <p>
-                There were two Patricks in the legislature.  Dan Patrick was a
-                senator and Diane Patrick was a representative.  Since there were
-                two, they had their names adjusted to show that they were distinct.
-                Or that's the way it was in the 81st Session.
-              </p>
-
-              <p>
-                Starting the day after the 82nd Session kicked off, Dan
-                Patrick's name was presented as Patrick.  Apparently, it was
-                decided that senators should have just their last names
-                displayed if there were no other senators that conflicted and
-                representatives would get the Last, First treatment.
-              </p>
-            </aside>
-          </section>
-
-          <section>
-            <h2>Limited</h2>
-
-            <aside class="notes">
-              Most of the data you're going to get is going to be limited in scope.
-              You're normally going to have to combine multiple sources to get
-              everything you're after, because...
-            </aside>
-          </section>
-
-          <section>
-            <h2>Never Exactly<br>What You Need</h2>
-          </section>
-
-          <section>
-            <h2>Unpleasant</h2>
-
-            <aside class="notes">
-              I don't mean to make it sound horrible, but it's generally a
-              headache to work with.
-            </aside>
-          </section>
-
-          <section>
-            <h2>Constrained</h2>
-            <p class="fragment">
-              Quantifiable
-            </p>
-
-            <ul>
-              <li class="fragment">150 Representatives</li>
-              <li class="fragment">31 Senators</li>
-              <li class="fragment">254 Counties</li>
-            </ul>
-
-            <aside class="notes">
-              This is a plus.  Most big data problems have no upper bound.  Most
-              real-world data represents something.  It's a set number of
-              representatives or senators.  Texas only has so many counties.
-              This gives you something to test against to make sure you've got
-              everything you need.
-            </aside>
-          </section>
-
-          <section data-state="soothe">
-            <h2><em>Really Interesting</em></h2>
-
-            <aside class="notes">
-              If nothing else, there's lots of really interesting pieces of data
-              out there that you can grab hold of to do cool things with.
+              Raw data is line upon line of numbers and text. It says nothing. With the right tools and presentation, it can become information. The goal we are trying to achieve is to make a single evocative visual that illustrates the insight we gained from finding the trends in the raw. It's storytelling.
             </aside>
           </section>
         </section>
 
         <section>
           <section>
-            <h1>Strategies</h1>
+            <h1>Why Should I Care?</h1>
           </section>
 
           <section>
-            <h2>Script Everything</h2>
-          </section>
-
-          <section>
-            <h2>Seriously, <em class="fragment">Everything</em></h2>
+            <h2>It's the Jobs, Stupid</h2>
+            <blockquote cite="http://www.cjr.org/data_points/between_the_spreadsheets_wnyc_jobs.php?page=all">
+              “There are an incredibly small number of people who are qualified to work at the speed that we work at, to work with the ethics, and understanding and fairness that we do in journalism, and who are really good at coding,” said John Keefe, senior editor of data news at WNYC. “And anybody who put any effort into being good at that and having those qualities is going to have a job probably before they can graduate.”
+            </blockquote>
 
             <aside class="notes">
-              Whether you're writing a scraper or adjusting first/last orders in
-              columns of a CSV, write a script for it.  It's ok to tinker with
-              manual processes, but never use data that wasn't generated by a
-              script.  It makes the process something you can duplicate.
-            </aside>
-          </section>
 
-          <section>
-            <h2>Keep Copies</h2>
-
-            <aside class="notes">
-              Data frequently disappears or changes in ways that can't fully be
-              explained to those of us who think data should live forever.  Make
-              sure to keep a copy of the original source data, whether that's
-              CSV, a shapefile, or HTML that you're processing.
-            </aside>
-          </section>
-
-          <section>
-            <h2>Know Your Source</h2>
-
-            <aside class="notes">
-              Understand where you're data is coming from.  Private sources might
-              have a horse in the race so the data they provide could be slanted.
-              Government agencies could have a mandate that forces their hand in
-              what they provide.  Make sure you know that.
-            </aside>
-          </section>
-
-          <section>
-            <h2>Know What<br>Humans Touched</h2>
-
-            <aside class="notes">
-              Know if a human was involved with any of the data you're working
-              with.  Often, government data will have someone that's tweaking
-              this data point, or adjusting that.  Make sure you understand
-              where humans were involved with your data so you know where to
-              watch for anomalies.
-            </aside>
-          </section>
-
-          <section>
-            <h2>Know Everything</h2>
-
-            <aside class="notes">
-              <p>
-                Basically, know everything.  When you're working with real-world
-                data, you need to understand everything about the data that
-                you're processing.  It's not uncommon to have a row of data that
-                looks perfectly valid, but column 221 has a special flag, that
-                if set, means this data is junk and should be ignored.
-              </p>
-
-              <p>
-                Make sure you grok the entire data set and don't make
-                assumptions about it.
-              </p>
-            </aside>
-          </section>
-
-          <section>
-            <h2>Document Everything</h2>
-            <p class="fragment">At least everything you use and learn</p>
-
-            <aside class="notes">
-              There is going to be a time when you come back to your importer
-              and go "why did I throw out columns 11-13?"  Make sure you're
-              documenting your work and what you learned about the data.  Does
-              column 221 provide a "junk" status on a column, make sure that's
-              documented.  Code works, English is better.
-            </aside>
-          </section>
-
-          <section>
-            <h2>Embrace Change</h2>
-
-            <aside class="notes">
-              Be prepared for change.  Don't write brittle code that interacts
-              with the data.  Just admit it's going to change and be ready for
-              that.
             </aside>
           </section>
         </section>
+
+        <section>
+          <section>
+            <h1>It's Also Journalism</h1>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h1>Where Do You Start?</h1>
+          </section>
+
+          <section>
+            <h2>Topic First</h2>
+            <p>Consider what topic you want to explore.</p>
+            <p>Will inform what sources you seek.</p>
+            <p>Let the data speak to you.</p>
+
+            <aside class="notes">
+
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Data to Visual</h1>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h1>Finding Data</h1>
+          </section>
+          <section>
+            <h2>Google is Your Friend</h2>
+
+            <aside class="notes">
+              Many public databases are online and can be found with a search.
+            </aside>
+          </section>
+          <section>
+            <h2>Pick up the Phone</h2>
+
+            <aside class="notes">
+              Sometimes it will be necessary to ask a person. Don't waste time with email racquetball.
+            </aside>
+            <section>
+              <h2>Visit an Office (or Two)</h2>
+
+              <aside class="notes">
+                Harder to turn away.
+              </aside>
+            </section>
+
+            <section>
+              <h2>Beware What You Ask For...</h2>
+
+              <aside class="notes">
+                Counting on you to not be able to find the trend.
+              </aside>
+            </section>
+
+          </section>
+
+          <section>
+            <section>
+              <h1>Clean Data</h1>
+            </section>
+            <section>
+              <h2>Messy</h2>
+
+              <aside class="notes">
+                Data will almost never be ready to use. Someone had to enter in the data at some point; mistakes were made and inconsistencies are present.
+              </aside>
+            </section>
+
+            <section>
+              <h2>Unpredictable</h2>
+
+              <aside class="notes">
+                Content can and will change. Never expect the data to be in the same format each time. Or in one file.
+              </aside>
+            </section>
+
+            <section>
+              <h2>Limited</h2>
+
+              <aside class="notes">
+                Data is not all encompassing; it covers one aspect that the data provider wants. It may be degrees conferred, but not majors. It may be alumni location, but only by state. Sometimes you will need to dig. Sometimes you need to combine more than one source.
+              </aside>
+            </section>
+
+            <section>
+              <h2>Never Exactly<br>What You Need</h2>
+            </section>
+
+            <section>
+              <h2>Difficult</h2>
+
+              <aside class="notes">
+                Data can cause headaches. You need to figure out what is in the data. That's a lot of reading or scripting.
+              </aside>
+            </section>
+
+            <section>
+              <h2>Constrained</h2>
+              <p class="fragment">
+                Quantifiable
+              </p>
+
+              <ul>
+                <li class="fragment">12 Colleges and Schools</li>
+                <li class="fragment">20 Aldermanic Districts</li>
+                <li class="fragment">18 Regents</li>
+              </ul>
+
+              <aside class="notes">
+                This is a plus. This data represents something. It's directly relatable to real world issues.
+              </aside>
+            </section>
+
+            <section>
+              <h2>Keep Copies</h2>
+            </section>
+
+            <section>
+              <h2>Never <em class="fragment">Work on Originals</em></h2>
+              <aside class="notes">
+                Data can be revised at a later date. You may make a mistake with the data and need to start over. Keep original files for archival and protective purposes.
+              </aside>
+            </section>
+
+            <section>
+              <h2>Know Everything</h2>
+              <aside class="notes">
+                Review the data for purpose. If there's a flag in column 206 that means "ignore record", best to know that.
+              </aside>
+            </section>
+
+            <section>
+              <h2>Find Trends</h2>
+              <aside class="notes">
+
+              </aside>
+            </section>
+
+            <section>
+              <h2>Make Fixes</h2>
+              <ul>
+                <li class="fragment">Clear duplicates</li>
+                <li class="fragment">Make like data consistent</li>
+                <li class="fragment">Make data as flat as possible</li>
+              </ul>
+              <aside class="notes">
+
+              </aside>
+            </section>
+
+            <section>
+              <h2>Not by Hand<br>If You Can Avoid It</h2>
+              <h3 class="fragment">Writing Scripts Can Save Your Sanity</h3>
+              <aside class="notes">
+                Scripting is your friend. If you're a Mac User, you have the Terminal. If you have Windows, you have Cygwin. Find tools that let you work on large sections of documents without actually needing to open them. It's worth it.
+              </aside>
+            </section>
+
+          </section>
+
+          <section>
+            <section>
+              <h1>Convert Data</h1>
+            </section>
+            <section>
+              <h2>Starts as Different Formats</h2>
+              <ul>
+                <li class="fragment">Starts as PDF, HTML, Excel...</li>
+                <li class="fragment">...Needs to Become...</li>
+                <li class="fragment">...Regular Text. (Usually CSV)</li>
+              </ul>
+            </section>
+            <section>
+              <h2>CSV is Common Currency</h2>
+            </section>
+            <section>
+              <h2>Databases Can Help</h2>
+            </section>
+          </section>
+
+
+          <section>
+            <section>
+              <h1>Display data</h1>
+            </section>
+            <section>
+              <h1>How Will You Present the Data?</h1>
+            </section>
+          </section>
+          <section>
+            <h1>Allow for Experimentation</h1>
+            <ul>
+              <li class="fragment">Charts</li>
+              <li class="fragment">Timelines</li>
+              <li class="fragment">Maps</li>
+            </ul>
+          </section>
+          <section>
+            <h1>How Can You Present Data?</h1>
+            <ul>
+              <li class="fragment">Illustrations</li>
+              <li class="fragment">Excel Charts</li>
+              <li class="fragment">D3.js</li>
+            </ul>
+          </section>
+        </section>
+
 
         <section>
           <section>
             <h1>Tools</h1>
           </section>
-
           <section>
-            <h2>Git</h2>
 
-            <aside class="notes">
-              This isn't huge data.  You need to keep copies of it around, so throw
-              those copies into source control.  Depending on the structure and format,
-              this can be an excellent way to see how data is changing.
-            </aside>
-          </section>
-
-          <section>
-            <h2><a href="https://github.com/onyxfish/csvkit">CSVKit</a></h2>
-
-            <aside class="notes">
-              <p>
-                CSVKit provides a bunch of command line tools for inspecting and
-                modifying csv files.  csv is the lingua franca of government data
-                sets, so this tool provides some really useful ways to get data
-                moved around.
-              </p>
-
-              <p>
-                Related, the intro documentation is an excellent way to teach
-                someone how to use a shell.
-              </p>
-            </aside>
-          </section>
-
-          <section>
-            <h2><a href="http://tabula.nerdpower.org/">Tabula</a></h2>
-
-            <aside class="notes">
-              Demo time?  Tabula is a cool, new (unreleased) tool that allows
-              you to pull structured CSVs straight out of a PDF.  The version
-              that's launching is web-based, but it would be reasonable to
-              create a CLI version based on this.
-            </aside>
-          </section>
-
-          <section>
-            <h2>Unix Philosophy</h2>
-
+            <h1>UNIX Philosophy</h1>
             <div class="fragment">
               <blockquote cite="http://en.wikipedia.org/wiki/Unix_philosophy">
                 Write programs that do one thing and do it well. Write programs to
@@ -366,226 +384,76 @@
             </div>
 
             <aside class="notes">
-              This isn't a tool, but you should follow it whenever you build
-              tools.  You want all of your data processing to follow the Unix
-              Philosophy so you can swap out any part of your tool chain.
+              Use tools that do single, simple things and chain them together. Allows you to swap out parts later if needed.
             </aside>
           </section>
-
           <section>
-            <h2><a href="http://python.org/">Python</a></h2>
-
-            <p class="fragment"><a href="http://www.numpy.org/">NumPy</a></p>
-            <p class="fragment"><a href="http://pandas.pydata.org/">pandas</a></p>
-
-            <aside class="notes">
-              I'm partial, but I think Python is one of the (if not the) best
-              tool for dealing with data.  It's quick, easy to work with, and
-              provides pretty powerful tools for text processing.  Throw in
-              NumPy and pandas for dealing with heavy statistical work, and it's
-              pretty solid.
-            </aside>
-          </section>
-
-          <section>
-            <h2><a href="http://www.r-project.org/">R</a></h2>
-
-            <aside class="notes">
-              That said, R is gaining a lot of traction as a processing
-              language.  It's meant to be used in a statistical setting, so
-              it has a lot of batteries includes (or easily available).
-            </aside>
-          </section>
-
-          <section>
-            <h2>Chrome Web Tools</h2>
-
-            <aside class="notes">
-              This is often overlooked, but if you're building scrapers it's a
-              great way to interact with the data.
-            </aside>
-          </section>
-
-          <section>
-            <h2><a href="http://jquery.com/">jQuery</a> -> <a href="http://pythonhosted.org/pyquery/">pyQuery</a></h2>
-
-            <aside class="notes">
-              Part of working with Chrome Web Tools is using jQuery to inspect
-              the DOM and locate relevant information.  This is part of the
-              exploratory phase, then I move that code into Python and pyQuery
-              to start processing the results I find.
-            </aside>
-          </section>
-
-          <section>
-            <h2>HTTP Proxies</h2>
-
+            <h1>UNIX Tools</h1>
             <ul>
-              <li class="fragment"><a href="http://www.charlesproxy.com/">Charles Proxy</a></li>
-              <li class="fragment"><a href="http://glimmerblocker.org/">Glimmer Blocker</a></li>
-            </ul>
-
-            <aside class="notes">
-              <p>
-                Charles Proxy is great for dealing with websites that you need to
-                reverse engineer.  Remember, you're scripting everything, so you
-                want to be able to script retrieving the data too.
-              </p>
-
-              <p>
-                Glimmer Blocker is interesting as a tool that you can use for
-                unintended purposes.  It's meant to block sites and filter traffic,
-                but it also provides logging.  You can set it up as the HTTP proxy
-                for your phone, then all traffic will go through it and get logged.
-                You can use it to "discover" hidden APIs to get at data that's hidden
-                in mobile applications.
-              </p>
-            </aside>
-          </section>
-
-          <section>
-            <h2><a href="https://github.com/OpenRefine/OpenRefine">OpenRefine</a></h2>
-
-            <aside class="notes">
-              <p>
-                This lets you create rules that are applied to the entire data
-                set.  It's a great way to create a first pass at normalizing data
-                so acronyms are expanded, and so forth.
-              </p>
-
-              <p>
-                This used to be a Google project, but it's now a full open-source
-                project called OpenRefine that you can run yourself.
-              </p>
-            </aside>
-          </section>
-
-          <section>
-            <h2><a href="https://www.overviewproject.org/">Overview</a></h2>
-
-            <aside class="notes">
-              Overview takes text documents and processes them, pulling out
-              keywords and then give you a way to explore those trees of data.
-              I've not had a reason to use it (yet), but it looks amazing and
-              I've seen some of the demos for it (available on the site) that
-              provide some really interesting results.
-            </aside>
-          </section>
-
-          <section>
-            <h2>Data Stores</h2>
-
-            <ul>
-              <li>CouchDB</li>
-              <li>MongoDB</li>
-              <li class="fragment">Postgres/PostGIS</li>
-            </ul>
-
-            <aside class="notes">
-              Both of these are included as simple data stores that are easy to get
-              started with.  Both have their pros and cons that are documented much
-              better than I can here in a few minutes, so I encourage you to spend
-              some time learning about that.
-            </aside>
-          </section>
-
-        </section>
-
-        <section>
-          <section>
-            <h1>Use Cases</h1>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h1><a href="http://www.texastribune.org/public-ed/explore/">Public Schools Explorer</a></h1>
-          </section>
-
-          <section>
-            <h2>8 Different Sources</h2>
-          </section>
-
-          <section>
-            <h2>Over 70 millions rows</h2>
-          </section>
-
-          <section>
-            <h2>1 data source has over 700 columns</h2>
-          </section>
-
-          <section>
-            <h2>12 Steps to Import</h2>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h1><a href="http://www.texastribune.org/library/data/government-employee-salaries/">State Employee<br>Salaries</a></h1>
-          </section>
-
-          <section>
-            <h2>141 Sources</h2>
-          </section>
-
-          <section>
-            <h2>Mostly Provided Separately</h2>
-          </section>
-
-          <section>
-            <h2>Still Automating</h2>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h1><a href="http://www.texastribune.org/library/data/texas-prisons/">State Prisoners</a></h1>
-          </section>
-
-          <section>
-            <h2>1 Source</h2>
-          </section>
-
-          <section>
-            <h2>On auto-pilot</h2>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h1><a href="http://www.texastribune.org/library/data/texas-reservoir-levels/">Reservoir Map</a></h1>
-          </section>
-
-          <section>
-            <h2>JSON Data!</h2>
-          </section>
-
-          <section>
-            <h2>Built Relationship</h2>
-
-            <ul>
-              <li>Early Access</li>
-              <li>Provided Feedback</li>
+              <li class="fragment">sed</li>
+              <li class="fragment">awk</li>
+              <li class="fragment">grep</li>
+              <li class="fragment">cut</li>
+              <li class="fragment">cat</li>
             </ul>
           </section>
-
           <section>
-            <h2>Talk to Your Sources</h2>
+            <h1><a href="https://www.cygwin.com/">Cygwin</a></h1>
+            <aside>UNIX Command Line Tools</aside>
           </section>
+          <section>
+            <h1>Text Editor</h1>
+            <p class="fragment">Seriously. Not Word. Plain Text.</p>
+            <ul>
+              <li class="fragment">TextMate</li>
+              <li class="fragment">NotePad++</li>
+              <li class="fragment">TextPad</li>
+              <li class="fragment">Sublime Text</li>
+            </ul>
+          </section>
+          <section>
+            <h1><a href="https://www.overviewproject.org/">Overview</a></h1>
+            <aside>Collects, aggregates, tags documents.</aside>
+          </section>
+          <section>
+            <h1><a href="http://openrefine.org">OpenRefine</a></h1>
+            <aside>Explores, Cleans, Transforms, Reconciles Data.</aside>
+          </section>
+          <section>
+            <h1><a href="http://tabula.nerdpower.org/">Tabula</a></h1>
+            <aside>Extract Tables from PDFs. Turns it into CSV file</aside>
+          </section>
+          <section>
+            <h1><a href="http://csvkit.readthedocs.org/en/latest/">csvkit</a></h1>
+          </section>
+          <section>
+            <h1><a href="http://community.pentaho.com/">Pentaho</a></h1>
+          </section>
+
         </section>
-
         <section>
-          <h1>Questions?</h1>
-          <h4>
-            <a href="http://twitter.com/tswicegood">@tswicegood</a> |
-            <a href="https://twitter.com/search/realtime?q=%23rwdata">#rwdata</a>
-          </h4>
+          <section>
+            <h1>Sources</h1>
+          </section>
+          <section>
 
-          <h4>
-            <a href="http://tswicegood.github.com/real-world-data/">
-              tswicegood.github.com/real-world-data/
-            </a>
-          </h4>
+            <h1><a href="http://apir.wisc.edu">UW-Madison Office of Academic Planning and Institutional Research</a></h1>
+
+
+            <li class="fragment"><a href="http://apir.wisc.edu/datadigest.htm">Data Digests</a></li>
+            <li class="fragment"><a href="http://apir.wisc.edu/rankings.htm">Common Data Set and Rankings</a></li>
+          </section>
+          <section>
+            <h1><a href="http://registrar.wisc.edu/course_grade_distributions.htm">UW-Madison Office of Registrar</a></h1>
+
+            <li class="fragment"><a href="http://registrar.wisc.edu/course_grade_distributions.htm">Course Grade Distributions</a></li>
+            <li class="fragment"><a href="http://registrar.wisc.edu/enrollment_reports_and_student_statistics.htm">Enrollment Reports & Student Statistics</a></li>
+          </section>
+          <section>
+            <h1><a href="http://www.uwsa.edu/opar/">UW-System Office of Policy Analysis &amp; Research</a></h1>
+
+            <li class="fragment"><a href="http://www.uwsa.edu/opar/ssb/">Student Statistics Reports</a></li>
+          </section>
 
         </section>
       </div>
@@ -610,21 +478,21 @@
 
         // Optional libraries used to extend on reveal.js
         dependencies: [
-          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
           // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 
           // allow remote notes
           { src: 'socket.io/socket.io.js', async: true },
           { src: 'plugin/notes-server/client.js', async: true }
-        ]
-      });
+          ]
+        });
 
-    </script>
+</script>
 
-  </body>
+</body>
 </html>

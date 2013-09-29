@@ -1,5 +1,10 @@
-# Real World Data
-Few data sets are clean. Few data sets qualify as big data. The Texas Tribune deals with government data ranging from thousands to millions of rows and every data set has one thing in common: there's next to nothing in common. Come to this talk to learn strategies for transforming ugly, nearly unusable data into something beautiful to interrogate.
+# Data Visualization
+Data visualization does not change the basics of journalism: research, investigation, newsworthiness or design. It helps you, and eventually your readers, see trends and correlations that can provide direction to your story. This is a quick overview of what would comprises developing a story through the collection, aggregation, transformation and presentation of data.
+
+# Credits
+The engine for this presentation was originally created by [Travis Swicegood]: https://github.com/tswicegood for his talk on [Real World Data]: https://github.com/tswicegood/real-world-data
+
+The original code is his. The modifications are mine.
 
 ## License
 
